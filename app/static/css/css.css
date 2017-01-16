@@ -1,0 +1,29 @@
+.header{
+    background-color: cornflowerblue;
+    height: 60px;
+}
+.title{
+    padding-top: 5px;
+    color: aliceblue;
+    text-align: left;
+}
+.side-tyoe{
+    list-style: none;
+    display: list-item;
+    margin-left: 0px;
+}
+.side{
+    position: absolute;
+    background-color: cornflowerblue;
+    width: 150px;
+    height: 100%;
+}
+.selectli{
+    display: list-item;
+    background-color:dodgerblue;
+    text-align: -webkit-match-parent;
+}
+a{
+    color: aliceblue;
+    text-align: left;
+}
