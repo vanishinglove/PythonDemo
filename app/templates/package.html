@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>lcf-test</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="../static/css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css">
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="../static/css/morris-0.4.3.min.css">
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">量财富开发平台</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li><a href="lcfindex"><i class="fa fa-dashboard"></i>首页</a></li>
+            <li class="active"><a href="lcfpack"><i class="fa fa-bar-chart-o"></i> 打包平台</a></li>
+            <li><a href="#"><i class="fa fa-table"></i> 自动化测试</a></li>
+            <li><a href="#"><i class="fa fa-edit"></i> 接口测试</a></li>
+            <li><a href="#"><i class="fa fa-font"></i> 安全测试</a></li>
+            <li><a href="#"><i class="fa fa-desktop"></i> 问题反馈</a></li>
+            <li><a href="#"><i class="fa fa-wrench"></i> 待定</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+      <div id="page-wrapper" style="min-height: 899px;">
+            <div class="row">
+                <div class="col-lg-6">
+                                    <h1>打包环境选择</h1>
+                                    <form role="form">
+                                            <div class="form-group">
+                                                <label for="disabledSelect">请选择</label>
+                                                <select id="disabledSelect" class="form-control" name="sel">
+                                                    <option value="1">测试环境</option>
+                                                    <option value="2">线上环境</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" onclick="getResult()">确认</button>
+                                    </form>
+
+
+                                </div>
+                <div class="col-lg-6">
+                        <h2>结果展示</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr id="henfuza">
+                                        <th>包名</th>
+                                        <th>环境</th>
+                                        <th>打包时间</th>
+                                        <th>打包结果</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>lcf</td>
+                                        <td>测试</td>
+                                        <td>2017</td>
+                                        <td>success</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+
+    </div><!-- /#wrapper -->
+
+
+    <!-- JavaScript -->
+    <script src="../static/js/jquery-1.10.2.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+
+    <!-- Page Specific Plugins -->    <script src="../static/js/raphael-min.js"></script>
+    <script src="../static/js/morris-0.4.3.min.js"></script>
+    <script src="../static/js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="../static/js/tablesorter/tables.js"></script>
+    <script src="../static/js/jhk.js"></script>
+  </body>
+</html>
