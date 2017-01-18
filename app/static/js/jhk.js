@@ -32,10 +32,15 @@ function clickSub() {
     $.ajax({
         type: "GET",
         url: "/jenkins",
-        dataType: "json",
+        dataType: "text",
         data: '',
         success: function (data1) {
-
+                if (data1=="loading"){
+                    alert("已经有程序在打包，请稍后")
+                }
+                if (data1=="start"){
+                    alert("开始打包，请稍等")
+                }
         }
     });
    // buildResult(1,2,3,4,5);
@@ -48,7 +53,7 @@ function buildResult(packname,env,time,lcfresult,link) {
         "<td>"+env+"</td> " +
         "<td>"+time+"</td> " +
         "<td>"+lcfresult+"</td> " +
-        "<td><a href=link>"+link+"</a></td>"+
+        "<td><a href="+"http://172.16.16.18:9999/job/com.lcf.android.debug/lastBuild/console"+">"+link+"</a></td>"+
         "<td><img src='http:\/\/qr.liantu.com/api.php?text=http:\/\/172.16.16.18:9999/job/com.lcf.android.debug/lastBuild/artifact/Lcf-Android/app/build/outputs/apk/app-debug.apk -o app-debug.png' height='100px' width='100px'></td>"+
         "</tr>";
       return res

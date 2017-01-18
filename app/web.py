@@ -4,6 +4,8 @@ from flask import Flask,url_for,request,render_template,Response
 import database
 import json
 import httputil
+import threading
+import time
 
 
 
@@ -19,15 +21,16 @@ def pack():
 
 @app.route('/packaction')
 def pac():
+    httputil.checkupdat("debug")
     a = database.select()
     b = "{'spam' : 'foo', 'parrot':'34'}"
     return json.dumps(a)
 
 @app.route('/jenkins')
 def jenkins():
-    httputil.request('debug')
+    if httputil.request('debug') == "loading":
+        return "loading"
     return ""
-
 
 with app.test_request_context():
     print url_for('index')
