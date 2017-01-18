@@ -3,6 +3,7 @@
 from flask import Flask,url_for,request,render_template,Response
 import database
 import json
+import httputil
 
 
 
@@ -19,8 +20,13 @@ def pack():
 @app.route('/packaction')
 def pac():
     a = database.select()
-    b = "{'spam' : 'foo', 'parrot' : 42}"
-    return json.dumps(b)
+    b = "{'spam' : 'foo', 'parrot':'34'}"
+    return json.dumps(a)
+
+@app.route('/jenkins')
+def jenkins():
+    httputil.request('debug')
+    return ""
 
 
 with app.test_request_context():

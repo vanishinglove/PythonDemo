@@ -60,7 +60,7 @@
                                                     <option value="2">线上环境</option>
                                                 </select>
                                             </div>
-                                            <button type="submit" class="btn btn-primary" onclick="getResult()">确认</button>
+                                            <button type="submit" class="btn btn-primary" onclick="clickSub()">确认</button>
                                     </form>
 
 
@@ -70,19 +70,16 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover">
                                 <thead>
-                                    <tr id="henfuza">
+                                    <tr>
                                         <th>包名</th>
                                         <th>环境</th>
                                         <th>打包时间</th>
                                         <th>打包结果</th>
+                                        <th>链接地址</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="result" >
                                     <tr>
-                                        <td>lcf</td>
-                                        <td>测试</td>
-                                        <td>2017</td>
-                                        <td>success</td>
                                     </tr>
                                 </tbody>
                             </table>
