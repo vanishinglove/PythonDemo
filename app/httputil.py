@@ -42,8 +42,9 @@ def checkupdat(lcfenv):
         if database.checkpac(package[0])=="HAVE":
                 result = re.findall(pattern, str)
                 database.update(time[0], result[0])
-        else:
-               database.insert(package[0], time[0], "loading", lcfenv, "LINK")
+    else:
+        if database.checkpac(package[0]) == "NOHAVE":
+            database.insert(package[0], time[0], "loading", lcfenv, "LINK")
 
 
     return "zhengzaigengxin"

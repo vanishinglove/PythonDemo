@@ -19,11 +19,20 @@ def index():
 def pack():
     return render_template('package.html')
 
+@app.route('/lcfauto')
+def lcfauto():
+    return render_template('auto.html')
+
+@app.route('/lcfinter')
+def lcfinter():
+    return render_template('interface.html')
+
+
+
 @app.route('/packaction')
 def pac():
     httputil.checkupdat("debug")
     a = database.select()
-    b = "{'spam' : 'foo', 'parrot':'34'}"
     return json.dumps(a)
 
 @app.route('/jenkins')

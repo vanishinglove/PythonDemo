@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/1/17.
  */
 
+
 function getResult() {
     console.log("hh");
         $.ajax({
@@ -13,21 +14,19 @@ function getResult() {
                   var str;
                   data1 = eval("(" + data1 + ")");
                   for(i in data1){
-                      console.log(data1[i]);
-                      for(j in data1[i]){
-                            console.log(data1[i][j]);
-
-                      }
                       str = str + buildResult(data1[i]['packname'],data1[i]['env'],data1[i]['time'],data1[i]['result'],data1[i]['link']);
                   }
 
-                  console.log(str);
+                 // console.log(str);
                 $('#result').append(str);
             }
      });
     console.log("hhs");
 }
 function clickSub() {
+    alert("开始打包请刷新查看");
+    $('#selectvalue').value();
+    //$('#submitbtn').attr("onclick","test();");
     console.log("kaishidabao");
     $.ajax({
         type: "GET",
@@ -36,11 +35,13 @@ function clickSub() {
         data: '',
         success: function (data1) {
                 if (data1=="loading"){
-                    alert("已经有程序在打包，请稍后")
+                    $('#submitbtn').attr("onclick","test();");
                 }
                 if (data1=="start"){
-                    alert("开始打包，请稍等")
+                    //alert("开始打包，请稍等")
+                   // $('#submitbtn').attr("onclick","clickSub();");
                 }
+
         }
     });
    // buildResult(1,2,3,4,5);
@@ -59,5 +60,31 @@ function buildResult(packname,env,time,lcfresult,link) {
       return res
 }
 
+function demo() {
+      var sel = $('#Selectvalue').val()
+      console.log(sel);
 
-getResult();
+}
+
+function test() {
+    alert("正在打包请稍等");
+ //   $('#submitbtn').attr("onclick","test();");
+    console.log("kaishidabao");
+    $.ajax({
+        type: "GET",
+        url: "/jenkins",
+        dataType: "text",
+        data: '',
+        success: function (data1) {
+                if (data1=="loading"){
+
+                }
+                if (data1=="start"){
+                    alert("开始打包，请稍等");
+                    $('#submitbtn').attr("onclick","clickSub();");
+                }
+              //  $('#submitbtn').attr("onclick","clickSub();");
+        }
+    });
+   // buildResult(1,2,3,4,5);
+}getResult();

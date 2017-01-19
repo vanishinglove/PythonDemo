@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>lcf-test</title>
 
     <!-- Bootstrap core CSS -->
@@ -36,63 +39,47 @@
        <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li><a href="lcfindex"><i class="fa fa-dashboard"></i>首页</a></li>
-            <li class="active"><a href="lcfpack"><i class="fa fa-bar-chart-o"></i> 打包平台</a></li>
+            <li><a href="lcfpack"><i class="fa fa-bar-chart-o"></i> 打包平台</a></li>
             <li><a href="lcfauto"><i class="fa fa-table"></i> 自动化测试</a></li>
-            <li><a href="lcfinter"><i class="fa fa-edit"></i> 接口测试</a></li>
+            <li class="active"><a href="lcfinter"><i class="fa fa-edit"></i> 接口测试</a></li>
             <li><a href="#"><i class="fa fa-font"></i> 安全测试</a></li>
             <li><a href="#"><i class="fa fa-desktop"></i> 问题反馈</a></li>
             <li><a href="#"><i class="fa fa-wrench"></i> 待定</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </nav>
-      <div id="page-wrapper" style="min-height: 899px;">
+       <div id="page-wrapper" style="min-height: 899px;">
             <div class="row">
                 <div class="col-lg-6">
-                                    <h1>打包环境选择</h1>
+                                    <h1>接口脚本选择</h1>
 
                                             <div class="form-group">
-                                                <label >请选择</label>
-                                                <select id="Selectvalue" class="form-control" name="sel">
-                                                    <option value="1">测试环境</option>
-                                                    <option value="2">线上环境</option>
+                                                <label for="disabledSelect">请选择</label>
+                                                <select id="disabledSelect" class="form-control" name="auto">
+                                                    <option value="1">首页</option>
+                                                    <option value="2">基金</option>
+                                                    <option value="3">股票</option>
+                                                    <option value="4">咨询</option>
                                                 </select>
                                             </div>
-                                            <button id="submitbtn" type="submit" class="btn btn-primary" onclick="demo()">确认</button>
+                                            <button type="submit" class="btn btn-primary" >确认</button>
 
 
 
                                 </div>
                 <div class="col-lg-6">
                         <h2>结果展示</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>包名</th>
-                                        <th>环境</th>
-                                        <th>打包时间</th>
-                                        <th>打包结果</th>
-                                        <th>链接地址</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="result" >
-                                    <tr>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             </div>
-
     </div><!-- /#wrapper -->
 
-
     <!-- JavaScript -->
-    <script src="../static/js/jquery-1.10.2.js"></script>
+   <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
     <script src="../static/js/bootstrap.js"></script>
     <script src="../static/js/jhk.js"></script>
+
   </body>
 </html>
